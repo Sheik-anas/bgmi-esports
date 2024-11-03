@@ -1,0 +1,328 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #121212, #333);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.main-header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+/* Unique Colors for Links */
+.main-header a{
+  color: #4caf50;
+}
+
+
+/* Hover Effect */
+.main-header a:hover {
+  color: #ffeb3b; /* Yellow on hover */
+}
+
+@media (max-width: 768px) {
+  .main-header ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-header a {
+    font-size: 1rem;
+  }
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #f5a623;
+  text-shadow: 2px 2px 10px rgba(245, 166, 35, 0.7);
+  animation: fadeInDown 1s ease;
+}
+
+/* Box Container */
+.box {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px #45A04961;
+}
+
+/* Box Header */
+.box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f5a623;
+}
+
+/* Slots Remaining */
+.box p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Register Button */
+button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Table Styling for Admin Page */
+table {
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease;
+}
+
+table, th, td {
+  border: 1px solid #444;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+th {
+  background: #333;
+}
+
+td {
+  background: #222;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .box {
+    width: 100%;
+    max-width: 95%;
+  }
+}
+
+/* Registered Players Inside Each Box */
+.box .registered-players {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  color: #f5a623;
+  text-align: left;
+}
+
+.box .registered-players h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.box .registered-players ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.box .registered-players li {
+  padding: 5px 0;
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+.box .registered-players li:last-child {
+  border-bottom: none;
+}
+
+/* Instructions Page Styling */
+.instructions-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.instructions-container ol {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.instructions-container a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.instructions-container a:hover {
+  color: #ff9800;
+}
+
+.instructions-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #f5a623;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.instructions-link:hover {
+  color: #ff9800;
+}
+
+/* Prize Pool Page Styling */
+.prize-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: left;
+}
+
+.prize-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.prize-container li {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #444;
+}
+
+.prize-container li:last-child {
+  border-bottom: none;
+}
+
+.prize-container p {
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.prize-container a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.prize-container a:hover {
+  color: #ff9800;
+  }
