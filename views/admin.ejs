@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Admin - Registered Players</title>
+</head>
+<body>
+  <h1>Registered Players - Admin Panel</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>In-Game Name</th>
+        <th>Phone Number</th>
+        <th>Registered Box</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% players.forEach(player => { %>
+        <tr>
+          <td><%= player.name %></td>
+          <td><%= player.phone %></td>
+          <td>Box <%= player.box %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
