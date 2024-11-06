@@ -46,7 +46,7 @@
   <div class="box" id="box3">
     <h2>Room starts at 5:35 PM</h2>
     <p>Slots remaining: <%= 60 - box3Count %></p>
-    <button id="paybtn3" onclick="initiatePayment(3)">Pay Now</button>
+    <button id="pay-btn3" onclick="initiatePayment(3)">Pay Now</button>
     <div id="register-form-3" class="register-form" style="display: none;">
       <input type="text" id="name-3" placeholder="In-game name" required>
       <input type="text" id="phone-3" placeholder="Phone Number" required>
@@ -64,7 +64,7 @@
   alert("Your payment cannot be processed at this time, but this feature will be active soon.");
 })
 
-    document.getElementById("pay-btn1").addEventListener("click", ()=>{
+    document.getElementById("pay-btn3").addEventListener("click", ()=>{
   alert("Your payment cannot be processed at this time, but this feature will be active soon.");
 })
 
