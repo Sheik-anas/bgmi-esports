@@ -24,7 +24,7 @@
   <div class="box" id="box1">
     <h2>Room starts at 3:30 PM</h2>
     <p>Slots remaining: <%= 60 - box1Count %></p>
-    <button onclick="initiatePayment(1)">Pay Now</button>
+    <button id="pay-btn1" onclick="initiatePayment(1)">Pay Now</button>
     <div id="register-form-1" class="register-form" style="display: none;">
       <input type="text" id="name-1" placeholder="In-game name" required>
       <input type="text" id="phone-1" placeholder="Phone Number" required>
@@ -35,7 +35,7 @@
   <div class="box" id="box2">
     <h2>Room starts at 4:25 PM</h2>
     <p>Slots remaining: <%= 60 - box2Count %></p>
-    <button onclick="initiatePayment(2)">Pay Now</button>
+    <button id="pay-btn2" onclick="initiatePayment(2)">Pay Now</button>
     <div id="register-form-2" class="register-form" style="display: none;">
       <input type="text" id="name-2" placeholder="In-game name" required>
       <input type="text" id="phone-2" placeholder="Phone Number" required>
@@ -46,7 +46,7 @@
   <div class="box" id="box3">
     <h2>Room starts at 5:35 PM</h2>
     <p>Slots remaining: <%= 60 - box3Count %></p>
-    <button onclick="initiatePayment(3)">Pay Now</button>
+    <button id="paybtn3" onclick="initiatePayment(3)">Pay Now</button>
     <div id="register-form-3" class="register-form" style="display: none;">
       <input type="text" id="name-3" placeholder="In-game name" required>
       <input type="text" id="phone-3" placeholder="Phone Number" required>
@@ -56,6 +56,18 @@
 
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
+    document.getElementById("pay-btn1").addEventListener("click", ()=>{
+  alert("Your payment cannot be processed at this time, but this feature will be active soon.");
+})
+
+    document.getElementById("pay-btn2").addEventListener("click", ()=>{
+  alert("Your payment cannot be processed at this time, but this feature will be active soon.");
+})
+
+    document.getElementById("pay-btn1").addEventListener("click", ()=>{
+  alert("Your payment cannot be processed at this time, but this feature will be active soon.");
+})
+
     async function initiatePayment(box) {
       try {
         const res = await fetch("/initiate-payment", {
